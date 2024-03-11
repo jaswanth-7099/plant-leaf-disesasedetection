@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&family=Poppins:wght@100&display=swap');
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+         header {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex; /* Use flexbox to center items */
+            flex-direction: row; /* Arrange items in a column */
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        nav li{
+            padding:1.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size:1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #000000ff;
+        }
+
+        nav {
+            width: 90%;
+            margin: auto;
+            /* border-bottom: 0.12em solid #a29e9e; */
+        }
+
+        nav a {
+            /* font-size: 1.2rem; */
+            margin-right: 4em;
+            color: rgb(101, 99, 99);
+            text-decoration: none;
+            /* font-weight: 700; */
+            transition: color 0.5s ease-in-out;
+        }
+        .logo{
+            /* font-family: Arial, Helvetica, sans-serif; */
+            letter-spacing: -0.5px;
+            margin-right: 30rem;
+            font-weight:bolder;
+            font-size: 25px;
+        }
+
+        .style2{
+            height: 51rem;
+            background: linear-gradient(#5840BA 60%, white 30%);
+            border-radius: 3.5rem;
+        }
+        .heading{
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffffff;
+            padding-top: 70px;
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+        .heading2{
+            margin: auto;
+            margin-top: -20px;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffffff;
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+        .sub-heading{
+            font-family: 'Poppins', sans-serif;
+            color: #ffffffff;
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding-top: 9px;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container1{
+            display: flex;
+             margin-left:300px;
+            margin-right: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+
+        }
+        .container2 img {
+            border-radius: 2rem;
+            margin-top: 1rem;
+            min-width:250px;
+        }
+        .mission{
+            display:flex;
+            height: 8rem;
+            justify-content: space-between;
+            background-color: #5840BA;
+            align-items: center;
+        }
+        .c1{
+            margin-left : 2.7rem;
+            color: #ffffffff;
+            font-size: 2rem;
+            font-family:'Fraunces', serif;
+            font-weight: 700;
+        }
+        .c2{
+            width: 70%;
+            color:#ffffffff;
+            font-family:'Fraunces', serif;
+        }
+        .image img{
+            height: 500px;
+            border: 15px solid #dbdada;
+            border-radius: 6px;
+        }
+        .chat-section{
+            margin: auto;
+            margin-top: 2rem;
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .chat-heading{
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+            color:#000000ff
+        }
+        .chat-subtext{
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #656565;
+        }
+        .chat-section-inside{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bg{
+            margin-top: 2rem;
+            background-color: #5840BA;
+            
+        }
+        .contact-us{
+            height: 10rem;
+            color: #ffffffff;
+            margin: auto;
+            width: 90%;
+            display: flex;
+            font-family: 'Fraunces', serif;
+            justify-content: space-between;
+        }
+        .contact-left{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .contact-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .contact-heading{
+            font-size: 2rem;
+            font-weight:bolder;
+        }
+        .b1{
+            font-family: 'Fraunces', serif;
+            padding: 0.7rem;
+            size: 0.8rem;
+            background-color: #339657;
+            color: #fff;
+            border: none;
+            border-radius: 19px; 
+            cursor: pointer; 
+            /* font-size: 1.6rem  */
+        }
+        .b1:hover {
+            background-color: #131314; 
+        }
+
+        .b1-style{
+            color: rgb(14, 14, 15);
+           
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        footer {
+            font-family: 'Poppins', sans-serif;
+            background-color: #333; /* Choose a background color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for the presence of the scroll_to_contact parameter
+            const scroll_to_contact = '{{ scroll_to_contact }}';
+    
+            // If the parameter is true, scroll to the Contact section
+            if (scroll_to_contact === 'true') {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+    
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">PlantDetect</li>
+                <li><a href="#" onclick="window.location.href='/indexf'">Home</a></li>
+                <li><a href="#" onclick="window.location.href='/aboutf'">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="style2">
+        <div class="main-container">
+            <div class="container">
+                <p class="heading">Detect and Prevent</p>
+                <p class="heading2"> Plant Diseases </p>
+            </div>
+            <div class="container1">
+                <div class="sub-heading">We provide cutting-edge technology and expertise to detect and prevent plant diseases. Our mission is to help farmers protect their crops and maximize their yield. </div>
+            </div>
+
+            <div class="container2">
+                <img src="https://i.ibb.co/SBXFPBK/about-img.png" alt="about-img" border="0">
+            </div>
+        </div>
+    </div>
+
+    <div class="mission">
+        <div class="c1">Our Mission: Protecting Plants, Preserving Nature </div>
+        <div class="c2">At Plant Disease Detection, we are committed to using innovative technology to protect plants and preserve nature. Our mission is to prevent plant diseases and ensure sustainable agriculture. </div>
+    </div>
+
+    <div class="chat-section">
+        <div class="image"><img src="https://i.ibb.co/4fcN3kK/desktop-wallpaper-seven-moments-that-basically-sum-up-your-aesthetic-green.jpg" alt="desktop-wallpaper-seven-moments-that-basically-sum-up-your-aesthetic-green" border="0"></div>
+        <div class="chat-section-inside">
+            <div class="chat-heading">Prevent Plant Diseases Before They Spread </div>
+            <div class="chat-subtext">Our model not only detects plant diseases but also provides preventive measures to stop the spread of diseases. By taking proactive steps, you can ensure the health and productivity of your plants.  </div>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="contact-us" id="contact">
+            <div class="contact-left">
+                <div class="contact-heading">Plant Disease Detection </div>
+                <div class="contact-subtext">Empowering plant health by using AI technology and an interactive chatbot for disease detection. </div>
+            </div>
+            <div class="contact-right">
+                <div class="contact-heading">Contact Us</div>
+                <div class="contact-mail">info@plantdiseasedetection.com</div>
+                <div class="contact-no">+91 9177413XXX</div>
+                <div class="b1-style">        
+                    <button type="button" class="b1" onclick="window.location.href='/newf'">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2023 Plant Disease Detection. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600&family=Poppins:wght@100&display=swap');
+        *{
+            margin-top: 7px;
+            padding: 0; 
+            box-sizing: border-box;
+            /* font-family: 'Poppins', sans-serif; */
+        }
+        header {
+            color: #fff;
+            border-bottom: 0.12em solid #a29e9e;
+        }
+        .logo{
+            /* margin: auto; */
+            
+            font-family: 'Poppins', sans-serif;
+            color:#000000ff ;
+            letter-spacing: -0.5px;
+            margin-left:1.3rem ;
+            margin-right: 30rem;
+            font-weight:bolder;
+            font-size: 25px;
+        }
+
+        nav img {
+            min-width:100px;
+            width: 35%; /* Adjust the width of your logo */
+            margin-right: 1.2em;
+            margin-left: 1.3em;
+        }
+
+        nav ul {
+            display: flex; /* Use flexbox to center items */
+            flex-direction: row; /* Arrange items in a column */
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        nav {
+            /* margin-top: 3rem; */
+            
+            width: 90%;
+            margin: auto;
+            /* margin-bottom: 3rem; */
+        }
+
+        nav a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-right: 4em;
+            color: rgb(101, 99, 99);
+            text-decoration: none;
+            /* font-weight: bold; */
+        }
+
+        .title{
+            font-family: 'Poppins', sans-serif;
+            color: #291642;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;
+            margin-top: 1.2rem; 
+        }
+        
+
+
+        .container{
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;
+            margin-top: 4em;
+            margin-bottom: 5rem;
+        }
+        
+
+        .dropArea{
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 0 0 0.5em #4d97e7;/* Add the box shadow */
+            background-color: rgb(37, 150, 190);
+            border: 0.10em dashed white;
+            height: 25em;
+            width: 79em;
+            border-radius:0.3em;
+            display: flex;
+            color: #0f0f0f;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+            .dropArea.active{
+                border: 0.125em solid #811717;
+            }
+            .dropArea .icon{
+                font-size: 18rem;
+                color: #6fc50c;
+            }
+            .dropArea h6{
+                font-size: 2rem;
+                margin: 0%;
+                color: #020202;     /*button text color */
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .dropArea span{
+                font-size: 1.5rem;
+                color: #0b0c0c;
+                margin: 0.62em 0 0.93em 0;
+            }
+
+            .dropArea button{
+                padding: 0.625em 1.2em;
+                padding-left: 3.4em;
+                padding-right: 3.4em;
+                font-size: 1.2rem; 
+                border: none;
+                outline: none;
+                background:transparent;
+                color: #0c0c0c;
+                border:0.10em solid #3f3030;
+                border-radius:0.4em;
+                cursor: pointer;
+                background-color: white;
+                transition:all 0.5s;
+            }
+
+            .dropArea button:hover{
+                background-color:#454549;
+                color:white
+            }
+
+            .dropArea img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius:0.3em;
+            }
+
+            .pred{
+                font-size: 1.5rem;
+                font-family: 'Fraunces', serif;
+                display: flex;
+                justify-content: center;
+                margin-top: 60px;
+                align-items: center;
+                margin-bottom: 60px;
+                font-weight: 500;
+            }
+
+            .pred1{
+                background-color: rgb(37, 150, 190);
+                border-radius: 1rem;
+                display: flex;
+                padding-left: 20px;
+                /* padding-top: 5px; */
+                padding-bottom: 5px;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+            .desp{
+                font-family:  'Fraunces', serif;;
+                margin-top: 40px;
+                padding-left: 20px;
+                font-weight: bolder;
+            }
+
+
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+        
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: gainsboro;
+                border-radius: 0.5em;
+            }
+        
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: rgb(56, 55, 55);
+                border-radius: 0.5em;
+            }
+        
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>  
+            <ul>
+                <li class="logo">PlantDetect</li>
+                <!-- <li><img src="https://i.ibb.co/YXqKS9Q/logo.png" alt="logo"></li> -->
+                <li><a href="#" onclick="window.location.href='/indexf'">Home</a></li>
+                <li><a href="#" onclick="window.location.href='/aboutf'">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/aboutf?scrollToContact=true">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="title">    
+        <h1 class="name"><strong>Plant Disease Detection</strong></h1>
+    </div>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data" id="uploadForm">
+        <div class="container">
+        <div class="dropArea" id="dropArea">
+            <h6><strong> Drag & Drop File Here</strong></h6>
+            <span>or</span>
+            <input type="file" name="image" id="fileInput" style="display: none;">
+            <button id="browseButton"><strong>Browse Files</strong></button>
+        </div>
+    </div>
+        <input type="submit" value="Upload" style="display: none;">
+    </form>
+
+    <div class="pred">
+        <br>Predicted Result - {{title}}
+    </div>
+
+
+
+    <h2 class="desp">Description of Disease:</h3>
+    <div class="pred1">
+        <!-- <br> -->
+        <div> {{description}}</div>
+    </div>
+
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+         const browseButton = document.getElementById('browseButton');
+         const uploadForm = document.getElementById('uploadForm');
+     
+         browseButton.addEventListener('click', (e) => {
+             e.preventDefault(); // Prevent form from submitting
+             fileInput.click();
+         });
+     
+         fileInput.addEventListener('change', (e) => {
+             e.preventDefault(); // Prevent form from submitting
+             const file = fileInput.files[0];
+             if (file) {
+                 console.log(file.name);
+                 uploadForm.submit(); // Submit form only if a file is selected
+             }
+         });
+     
+         const dropArea = document.getElementById('dropArea');
+     
+         dropArea.addEventListener('dragover', (e) => {
+             e.preventDefault();
+             dropArea.style.border = '2px dashed #007BFF';
+         });
+     
+         dropArea.addEventListener('dragleave', () => {
+             dropArea.style.border = '2px dashed #ccc';
+         });
+     
+         dropArea.addEventListener('drop', (e) => {
+             e.preventDefault();
+             dropArea.style.border = '2px dashed #ccc';
+     
+             const files = e.dataTransfer.files;
+     
+             if (files.length > 0) {
+                 fileInput.files = files;
+                 console.log('Dropped file:', files[0].name);
+                 uploadForm.submit(); // Submit form only if files are dropped
+             }
+         });
+     </script>
+</body>
+</html>

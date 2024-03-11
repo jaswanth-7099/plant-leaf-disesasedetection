@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-logo img {
+            margin-top: 1rem;
+            min-width:250px;
+            width: 19rem;
+
+            
+        }
+        body {
+            padding:0rem;
+            margin: 0rem;
+            background-color:white; 
+        }
+
+        .container {
+            width: 95%;
+            margin: 0 auto;
+            display: flex; 
+            justify-content: space-between;
+        }
+        
+        .ah-wrap{
+            /* padding-left: 2.5rem; */
+            color: rgb(0, 41, 0);
+            letter-spacing: -2px;
+            margin-bottom: 6.25rem;
+        }
+
+        h1 {
+            display: inline-block;
+            font-family: 'Roboto';
+            font-size: 3.9rem;
+            margin-bottom: 1.1rem;
+            line-height: 100%;
+            color: inherit;
+        }
+
+        h4 {
+            font-size: 1.7rem;
+            line-height: 140%;
+            color: #5b5c5e;
+            display: block;
+            letter-spacing: -1.7px;
+            font-weight: bold;
+        }
+
+       
+
+        .b1{
+            padding: 1.56rem;
+            size: 0.6rem;
+            background-color: #141414;
+            color: #fff;
+            border: none;
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1.6rem 
+        }
+        .b1:hover {
+            background-color: #1840af; 
+        }
+
+        .b1-style{
+            color: rgb(14, 14, 15);
+           
+        }
+
+        .flex1{
+            margin-top: 3.7rem;
+            padding-left: 1.2rem;
+        }
+       
+        .image img{
+            margin-left:1.2rem ;
+            width: 49rem;
+        }
+        .rounded-image {
+            border-radius: 5%;
+        }
+
+        /* for chatbot-css */
+
+
+        /* Style for the chat box */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2.4rem;
+            width: 4rem;
+            height: 4rem;
+            background-color: #007bff; /* Change the color as needed */
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 4rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1.7rem; /* Adjust the font size as needed */
+            transition: transform 1.3s ease;
+
+        }
+
+        #chatbot-icon.active {
+            transform: rotate(180deg); /* Rotate the chat icon to form an X */
+        }
+
+        /* Style for the chat box */
+        #chat-box {
+            /* display: none; */
+            /* padding: 20px; */
+            position: fixed;
+            bottom: 6.4rem;
+            right: 2.3rem;
+            width: 250px;
+            height: 300px;
+            /* background-color: #fff; */
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto; /* Enable scrolling if content exceeds the box height */
+            border-radius: 10px;
+            border: 2px ridge whitesmoke;
+            padding: 10px;
+            opacity: 0;
+            /* transform: translateY(0); */
+            transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+        }
+        #chat-box.show {
+            opacity: 1.3; /* Set opacity to 1 when the box is shown */
+            /* transform: translateY(0); */
+        }
+
+        #user-input {
+            width: calc(78% - 20px);
+            /* width: 78%; */
+            padding: 10px;
+            border: 1px solid #dedddd;
+            border-radius: 5px;
+            /* background-color: rgba(250, 249, 249, 0.64); */
+            backdrop-filter: blur(100px);
+        }
+
+        #user-input:focus {
+            outline: none;
+            border: 2px solid #a8a8a8; 
+        }
+
+        #send-button {
+            width: 20%;
+            background-color: #007bff;
+            padding: 10px;
+            margin-left: 4px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .keyboard{
+            /* padding: 20px; */
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            bottom:7.2rem;
+        }
+
+        .user-chat-style{
+            margin-left: auto;
+            margin-top: 4px;
+            font-size: 1rem;
+            font-family: 'Roboto';
+            font-style: italic;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #007bff;
+            border-radius: 5px; 
+        }
+
+        .system-chat-style{
+            margin-top:4px;
+            font-family: 'Roboto';
+            font-style: italic;
+            font-size: 1rem;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color:  #a8a8a8;
+            border-radius: 5px;
+        }
+        .new-classname{
+            margin-top:4px;
+            font-family: 'Roboto';
+            font-style: italic;
+            font-size: 1rem;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color:  #a8a8a8;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+     
+        ::-webkit-scrollbar-track {
+            background: gainsboro;
+            border-radius: 8px;
+        }
+     
+        ::-webkit-scrollbar-thumb {
+            background: rgb(56, 55, 55);
+            border-radius: 8px;
+        }
+     
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        footer {
+            font-family: 'Poppins', sans-serif;
+            background-color: #333; /* Choose a background color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="nav-logo"><img src="https://i.ibb.co/YXqKS9Q/logo.png" alt="logo"></div> 
+
+    <h1 class="ah-header">
+        <div class="container">
+            <div class="flex1">
+                <span class="ah-wrap">
+                    <span>Plant Disease</span>
+                </span>
+                <br>
+                <span class="ah-wrap" id="italy">
+                    <span style="font-style: italic" class="pad">Prediction by AI</span>
+                </span>
+                <div class="rectangle">
+                    <h4 class="ah-subhead">Explore the future of agriculture with our cutting-edge plant disease prediction system powered by deep learning techniques, revolutionizing crop health and yield optimization.</h4>
+                </div>
+                <div class="b1-style">        
+                    <button type="button" class="b1" onclick="window.location.href='/newf'">Try for Free</button>
+                </div>
+            </div>
+                
+            <div class="image">
+                <img src="https://i.ibb.co/0tJ0S9g/crop.jpg" alt="crop"class="rounded-image">
+
+            </div>
+        </div>
+    </h1>
+
+    <div id="chatbot-icon" onclick="toggleChatBox()">&#128172;</div>
+  
+
+    <!-- Chat box HTML -->
+    <div id="chat-box">
+        <div id="chat-content"></div>
+       
+        <form action="/submi" method="POST" enctype="multipart/form-data" id="uploadForm"  onsubmit="event.preventDefault(); submitForm();" >
+           
+            <input type="submit" value="button" id="trigger" style="display: none;">
+
+            <div class="keyboard">
+                <input type="text" id="user-input" placeholder="Type your query..."autocomplete="off">
+    
+                <button id="send-button" onclick="sendMessage()">Send</button>
+            </div>
+        </form>
+       
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Plant Disease Detection. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        function submitForm() {
+            // Get the user input
+            var userInput = document.getElementById('user-input').value;
+            console.log("Input "+userInput);
+            // Create a JSON object with the user input
+            var data = {
+                'message': userInput
+            };
+            console.log(data);
+
+            // Send a POST request to the server with JSON data
+            fetch('/submi', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the content dynamically
+                document.getElementById('systemChatDiv').innerHTML = data.title;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // JavaScript to handle sending messages
+        function sendMessage() {
+            // Select the div by id
+            var systemElement = document.querySelector('#systemChatDiv');
+
+            // Check if the element exists before attempting to modify it
+            if (systemElement) {
+                // Change classname
+                systemElement.className = 'new-classname';
+
+                // Change id
+                systemElement.id = 'newSystemChatDivId';
+            }
+            ///////////////////////////////////for changing-div-classname/////////////
+
+            var userInput = document.getElementById("user-input").value;
+            var chatContent = document.getElementById("chat-content");
+            
+            // Create a new message element
+            var messageElement = document.createElement("div");
+            messageElement.textContent = userInput;
+            messageElement.className = 'user-chat-style';
+            
+            // Append the message to the chat content
+            chatContent.appendChild(messageElement);
+
+            submitForm();
+
+            document.getElementById("user-input").value = "";
+
+            var systemElement=document.createElement("div");
+            systemElement.textContent="........";
+            systemElement.className='system-chat-style';
+            systemElement.id='systemChatDiv';
+            
+            chatContent.appendChild(systemElement);
+
+          
+        }
+
+
+         function toggleChatBox() {
+            var chatBox = document.getElementById("chat-box");
+            chatBox.classList.toggle("show"); 
+            var chatIcon = document.getElementById("chatbot-icon");
+            chatIcon.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
